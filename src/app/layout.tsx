@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Source_Code_Pro } from "next/font/google";
 import "./globals.css";
 
+const sourceCodePro = Source_Code_Pro({ subsets: ["latin"], weight: ["200", "400", "700"] });
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -25,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={sourceCodePro.className}
       >
         {children}
       </body>
