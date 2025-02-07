@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
 
-      <Image src="/lj2.png" width={96} height={96} alt="Logo" className="rounded-xl" />
+      <Image src="./lj2.png" width={96} height={96} alt="Logo" className="rounded-xl" />
       <p className="mx-auto mt-[40px] mb-[54px] text-[18px] font-light text-[#C5C5C5] text-center max-w-lg">
         Senior IT student</p>
       <div className="text-center">
