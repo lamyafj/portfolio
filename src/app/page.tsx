@@ -8,10 +8,9 @@ export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen p-8 pb-20 gap-8 sm:p-20 font-[family-name:var(--font-geist-sans)]">
 
-      <Image src="/lj2.png" width={200} height={200} alt="Logo" className="rounded-xl mt-[30px]" />
-      <h1 className="text-4xl font-bold">Lamya Aljaithin</h1>
-      <p className="mx-auto mt-[10px] mb-[54px] text-[18px] font-light text-[#C5C5C5] text-center max-w-lg">
-      Senior IT student with focus on cybersecurity<br />skilled in problem-solving and learning to new technologies </p>
+      <Image src="./lj2.png" width={96} height={96} alt="Logo" className="rounded-xl" />
+      <p className="mx-auto mt-[40px] mb-[54px] text-[18px] font-light text-[#C5C5C5] text-center max-w-lg">
+        Senior IT student</p>
       <div className="text-center">
       <a href="https://www.linkedin.com/in/lamyafj/" target="_blank" rel="noopener noreferrer">
   <button className="text-gray-800 inline-block px-4 py-2 mr-2  border-2 bg-white rounded-full font-semibold text-sm">
