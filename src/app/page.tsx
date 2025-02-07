@@ -7,11 +7,9 @@ import SkillCarousel from "./skillCarousel";
 export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen p-8 pb-20 gap-8 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-
       <Image src="/lj2.png" width={140} height={140} alt="Logo" className="rounded-xl mt-[50px]" />
       <h1 className="text-4xl font-bold">Lamya Aljaithin</h1>
-
-      <p className="mx-auto mt-[10px] mb-[10px] text-[18px] font-light text-[#C5C5C5] text-center max-w-lg">
+      <p className="mx-auto mt-[10px] mb-[10px] text-[18px] font-light text-[white] text-center max-w-lg">
   Senior IT student at KSU with focus on cybersecurity  <br /> skilled in problem-solving and adapting to new technologies.
 </p>
       <div className="text-center">
@@ -55,8 +53,11 @@ export default function Home() {
             </div>
       </main>
 
-      <footer className="mt-16 flex gap-6 flex-wrap items-center justify-center">
-      <i className="fas fa-heart" style={{ color: "white" }}></i> 
+      <footer className="mt-16  flex flex-col items-center justify-center">
+        <i className="fas fa-heart" style={{ color: "white" }}></i>
+        <p className="mt-[20px] mb-[10px] text-[14px] font-light text-[#C5C5C5] text-center">
+          MADE BY LJ
+        </p>
       </footer>
     </div>
   );

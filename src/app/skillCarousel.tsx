@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
@@ -14,12 +14,25 @@ const skills = [
 export default function SkillCarousel() {
   const [index, setIndex] = useState(0);
 
-//   const nextSlide = () => setIndex((prev) => (prev + 1) % skills.length);
-  const prevSlide = () => setIndex((prev) => (prev - 1 + skills.length) % skills.length);
+  // Auto-looping effect
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextSlide();
+    }, 3000); // Change image every 3 seconds
+
+    return () => clearInterval(interval); // Cleanup on unmount
+  }, [index]);
+
+  // Next & Previous Functions
+  const nextSlide = () => setIndex((prev) => (prev + 1) % skills.length);
+
 
   return (
     <div className="relative w-full flex flex-col items-center mt-10">
-        skills
+      <h2 className="text-white text-2xl font-bold uppercase tracking-wider">
+        Skills
+      </h2>
+
       <div className="relative flex items-center justify-center mt-5 h-80 w-[400px] overflow-hidden">
         <AnimatePresence>
           {skills.map((skill, i) => {
@@ -51,19 +64,26 @@ export default function SkillCarousel() {
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.5 }}
                 className="absolute"
-              >
-                 <button onClick={prevSlide} > <Image src={skill.src} width={100} height={100} alt={skill.alt} className="rounded-lg" /></button>
+              >        <button
+              onClick={nextSlide}
+            >
+                <Image
+                  src={skill.src}
+                  width={100}
+                  height={100}
+                  alt={skill.alt}
+                  className="rounded-lg   
+                    drop-shadow-[0_0_20px_rgba(0,200,255,0.6)]
+                    hover:drop-shadow-[0_0_20px_rgba(0,200,255,0.7)]"
+                />   </button>
               </motion.div>
             );
           })}
         </AnimatePresence>
       </div>
 
-      {/* Buttons for Scrolling */}
-      <div className="flex gap-4 mt-6">
-        {/* <button onClick={prevSlide} className="px-4 py-2 bg-gray-800 text-white rounded-full">⬅️</button>
-        <button onClick={nextSlide} className="px-4 py-2 bg-gray-800 text-white rounded-full">➡️</button> */}
-      </div>
+      {/* Navigation Buttons */}
+
     </div>
   );
 }
