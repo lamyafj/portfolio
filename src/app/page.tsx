@@ -1,16 +1,20 @@
 // import { color } from "framer-motion";
 import Image from "next/image";
+import SkillCarousel from "./skillCarousel";
+
+// const skill=['./react.png','./node.png','./php.png','./python.png','./java.png']
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+    <div className="flex flex-col items-center justify-center min-h-screen p-8 pb-20 gap-8 sm:p-20 font-[family-name:var(--font-geist-sans)]">
 
-      <Image src="/lj2.png" width={96} height={96} alt="Logo" className="rounded-xl" />
-      <p className="mx-auto mt-[40px] mb-[54px] text-[18px] font-light text-[#C5C5C5] text-center max-w-lg">
-        Senior IT student</p>
+      <Image src="/lj2.png" width={200} height={200} alt="Logo" className="rounded-xl mt-[30px]" />
+      <h1 className="text-4xl font-bold">Lamya Aljaithin</h1>
+      <p className="mx-auto mt-[10px] mb-[54px] text-[18px] font-light text-[#C5C5C5] text-center max-w-lg">
+      Senior IT student with focus on cybersecurity<br />skilled in problem-solving and learning to new technologies </p>
       <div className="text-center">
       <a href="https://www.linkedin.com/in/lamyafj/" target="_blank" rel="noopener noreferrer">
-  <button className="text-gray-800 inline-block px-4 py-2 mr-2 bg-white rounded-full font-semibold text-sm">
+  <button className="text-gray-800 inline-block px-4 py-2 mr-2  border-2 bg-white rounded-full font-semibold text-sm">
   Let&apos;s Connect
     <svg className="h-4 w-4 text-black-500 inline ml-1" width="14" height="14" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
       <path stroke="none" d="M0 0h24v24H0z" />
@@ -20,13 +24,20 @@ export default function Home() {
   </button>
 </a>
 <a href="mailto:lamya.aljaithin@gmail.com">
-  <button className="text-white inline-block px-4 py-2 bg-transparent border-2 rounded-full font-semibold text-sm">
+  <button className="text-white inline-block px-7 py-2 bg-transparent border-2 rounded-full font-semibold text-sm">
     Email Me
     <i className="fas fa-envelope text-white ml-2"></i>
   </button>
 </a>
 
 </div>
+
+<div>
+  
+</div>
+   
+      <SkillCarousel />
+
       <main className="flex flex-col gap-8 items-center sm:items-center">
         <p>Academic Projects</p>
 
