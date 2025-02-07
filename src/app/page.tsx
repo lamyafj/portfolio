@@ -11,7 +11,7 @@ export default function Home() {
       <div className="text-center">
       <a href="https://www.linkedin.com/in/lamyafj/" target="_blank" rel="noopener noreferrer">
   <button className="text-gray-800 inline-block px-4 py-2 mr-2 bg-white rounded-full font-semibold text-sm">
-    Let's Connect
+  Let&apos;s Connect
     <svg className="h-4 w-4 text-black-500 inline ml-1" width="14" height="14" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
       <path stroke="none" d="M0 0h24v24H0z" />
       <line x1="17" y1="7" x2="7" y2="17" />
