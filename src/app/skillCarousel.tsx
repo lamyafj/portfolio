@@ -4,13 +4,13 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
 const skills = [
-  { src: "/react.png", alt: "React" },
-  { src: "/node.png", alt: "Node.js" },
-  { src: "/php.png", alt: "PHP" },
-  { src: "/python.png", alt: "Python" },
-  { src: "/java.png", alt: "Java" },
-  { src: "/firebase.png", alt: "firebase" },
-  { src: "/nextjs.webp", alt: "firebase" },
+  { src: "./react.png", alt: "React" },
+  { src: "./node.png", alt: "Node.js" },
+  { src: "./php.png", alt: "PHP" },
+  { src: "./python.png", alt: "Python" },
+  { src: "./java.png", alt: "Java" },
+  { src: "./firebase.png", alt: "firebase" },
+  { src: "./nextjs.webp", alt: "firebase" },
 ];
 
 export default function SkillCarousel() {
