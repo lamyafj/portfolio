@@ -1,8 +1,11 @@
 // import { color } from "framer-motion";
 import Image from "next/image";
 import SkillCarousel from "./skillCarousel";
+import Projects from "./projects";
 
 // const skill=['./react.png','./node.png','./php.png','./python.png','./java.png']
+
+
 
 export default function Home() {
   return (
@@ -41,16 +44,7 @@ export default function Home() {
       <main className="flex flex-col gap-8 items-center sm:items-center">
         <p>Academic Projects</p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-4">
-              {[1, 2, 3, 4].map((project) => (
-                <div key={project} className="bg-black/20 p-6 rounded-md shadow-sm cursor-pointer border-2 border-gray-50 hover:border-black transition-colors duration-300">
-                  <h2 className="text-xl font-semibold mb-4">Project {project}</h2>
-                  <p className="text-white-700">Description of Project {project} goes here. You can provide more details about the project.</p>
-                  <div className="col-start-2 row-start-1 row-end-3 sm:mt-4 lg:mt-4 xl:mt-4">
-                  </div>
-                </div>
-              ))}
-            </div>
+     <Projects/>
       </main>
 
       <footer className="mt-16  flex flex-col items-center justify-center">
