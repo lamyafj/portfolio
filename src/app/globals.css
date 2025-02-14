@@ -58,7 +58,7 @@ body {
   padding: 2px; /* this becomes the “border” thickness */
   
   /* The animated background gradient */
-  background: linear-gradient(90deg, #ff0080, #aac2b7, #9fece4);
+  background: linear-gradient(90deg, #dd9bbc, #aac2b7, #9fece4);
   background-size: 200% 200%;
   animation: gradientAnimation 4s ease infinite;
   
