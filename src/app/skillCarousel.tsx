@@ -9,6 +9,8 @@ const skills = [
   { src: "/php.png", alt: "PHP" },
   { src: "/python.png", alt: "Python" },
   { src: "/java.png", alt: "Java" },
+  { src: "/firebase.png", alt: "firebase" },
+  { src: "/nextjs.webp", alt: "firebase" },
 ];
 
 export default function SkillCarousel() {

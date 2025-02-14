@@ -17,6 +17,7 @@
     transparent 360deg
   );
 
+  overflow-x: hidden;
   --third-glow: conic-gradient(
     from 90deg at 50% 50%,
     #76a56b 0deg,
@@ -37,10 +38,67 @@
 body {
   color: var(--foreground);
   background: var( --background);
-  font-family: "Source Code Pro", Helvetica, sans-serif;
+  font-family: "Source Code Pro","Zain", Helvetica, sans-serif;
   min-height: 100vh;
   background-attachment: fixed;
+  overflow-x: hidden;
 }
+
+
+.gradient-border {
+  position: relative;
+}
+
+/* The pseudo-element for the animated border */
+.gradient-border::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* fill the container */
+  border-radius: inherit; /* match parent’s rounded corners */
+  padding: 2px; /* this becomes the “border” thickness */
+  
+  /* The animated background gradient */
+  background: linear-gradient(90deg, #ff0080, #aac2b7, #9fece4);
+  background-size: 200% 200%;
+  animation: gradientAnimation 4s ease infinite;
+  
+  /*
+    The mask ensures only the "border" region is visible.
+    - We cut out the center so your content remains untouched.
+  */
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  
+  /* Stacking and pointer events */
+  pointer-events: none;
+  z-index: -1;
+  
+  /* Start hidden; reveal on hover */
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* On hover, show the glowing border */
+.gradient-border::before {
+  opacity: 1;
+}
+
+/* Keyframes for the gradient's back-and-forth animation */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
 
 body::before,
 body::after {

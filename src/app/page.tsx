@@ -48,9 +48,9 @@ export default function Home() {
       </main>
 
       <footer className="mt-16  flex flex-col items-center justify-center">
-        <i className="fas fa-heart" style={{ color: "white" }}></i>
+        {/* <i className="fas fa-heart" style={{ color: "white" }}></i> */}
         <p className="mt-[20px] mb-[10px] text-[14px] font-light text-[#C5C5C5] text-center">
-          MADE BY LJ
+          MADE <i className="fas fa-heart text-pink-500"></i>  BY LJ © 2025
         </p>
       </footer>
     </div>
